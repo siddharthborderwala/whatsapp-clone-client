@@ -59,7 +59,7 @@ const MessageDate = styled.div`
 
 const ChatList: React.FC = () => {
   return (
-    <div>
+    <Container>
       <StyledList>
         {chats.map((chat) => (
           <StyledListItem key={chat.id} button>
@@ -78,7 +78,7 @@ const ChatList: React.FC = () => {
           </StyledListItem>
         ))}
       </StyledList>
-    </div>
+    </Container>
   );
 };
 
