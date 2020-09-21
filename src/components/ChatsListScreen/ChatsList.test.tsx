@@ -42,9 +42,7 @@ describe('ChatList', () => {
 
     {
       const history = createBrowserHistory();
-      const { container, getByTestId } = render(
-        <ChatsList history={history} />
-      );
+      const { getByTestId } = render(<ChatsList history={history} />);
 
       await waitFor(() => screen.getByTestId('name'));
 
@@ -81,9 +79,7 @@ describe('ChatList', () => {
     const history = createBrowserHistory();
 
     {
-      const { container, getByTestId } = render(
-        <ChatsList history={history} />
-      );
+      const { getByTestId } = render(<ChatsList history={history} />);
 
       await waitFor(() => screen.getByTestId('chat'));
 
