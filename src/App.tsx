@@ -7,7 +7,6 @@ import {
 } from 'react-router-dom';
 
 import MyAnimatedSwitch from './components/AnimatedSwitch';
-
 import ChatsListScreen from './components/ChatsListScreen';
 import ChatRoomScreen from './components/ChatRoomScreen';
 
@@ -21,8 +20,11 @@ const App: React.FC = () => {
         <Route
           exact
           path="/chat/:chatId"
-          component={({ match }: RouteComponentProps<{ chatId: string }>) => (
-            <ChatRoomScreen chatId={match.params.chatId} />
+          component={({
+            match,
+            history,
+          }: RouteComponentProps<{ chatId: string }>) => (
+            <ChatRoomScreen chatId={match.params.chatId} history={history} />
           )}
         />
       </MyAnimatedSwitch>
